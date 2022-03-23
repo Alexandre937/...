@@ -1,0 +1,15 @@
+Dear ,
+
+As we shared earlier today on our company blog, we are conducting a thorough investigation into the recent LAPSUS$ claims and any impact to our valued customers. MY COMPANY has been identified as a customer that was serviced by the third-party customer support provider during the five-day time period indicated in the blog post, and we are evaluating whether you have been impacted.
+
+As detailed in the post, the potential impact to you, our customer, is limited to only that access that support engineers have. By design, these support engineers have limited access. They are unable to create or delete users, or download customer databases. Support engineers do have access to limited data – for example, Jira tickets and lists of users. Support engineers are also able to facilitate the resetting of passwords and multi-factor authentication factors for users, but are unable to choose those passwords. In other words, the attacker could keep triggering a password reset for users, but can't login to the service.
+
+Consistent with our core values of transparency, integrity, and customer success, we want to make you aware of these initial findings from our ongoing investigation as we work to address this matter. We will be following up with a customized report within 72 hours and are committed as your partner to help resolve any outstanding issues if any are identified.
+
+You are invited to attend a live webinar tomorrow, Wednesday, March 23, to hear more technical details from Okta CSO, David Bradbury. The webinar will occur at 8 am PDT and again at 4 pm PDT to accommodate our global customers. Please register here.
+
+Our customers are our pride, purpose, and #1 priority. We take our responsibility to protect and secure customers' information very seriously. We deeply apologize for the inconvenience and uncertainty this has caused. For any additional questions, please open a support case.
+
+Sincerely,
+Eric Kelleher
+Chief Customer Officer 
