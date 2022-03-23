@@ -1,15 +1,121 @@
-Dear ,
+08:02:09
+Good afternoon and good evening to all of those on the call.
+08:02:13
+Today. I appreciate that everyone's time is precious and I value your attendance by way of introduction.
+08:02:20
+My name is David Bradbury, and i'm the chief security Officer here at Okta.
+08:02:25
+Now as such, i'm the accountable executive for security. Madison, Oktaber, and so today I want to take a few minutes to speak with you regarding events that have been covered widely in the media when March, 21 less than 40
+08:02:38
+8 h ago, number of screenshots were published online that were taken from a computer used by one of Okta's.
+08:02:46
+Third party customer support engineers the sharing of these screenshots. it's an embarrassment for myself and for the entire opportunity.
+08:02:55
+Today I want to provide my perspective on what is transpired and where we are today.
+08:03:01
+With this investigation, and I hope that it will illuminate why i'm, confident in our conclusions that the Okta service has not been breached, and that there are no corrective actions that need to be taken
+08:03:13
+by our customers, and by way of background, like many other Sas providers, Okta uses several companies to expand our workforce.
+08:03:23
+Those entities help us to deliver for our customers and make them successful with our products.
+08:03:29
+Cytel is an octa subprocessor that provides optical with contract workers for our customer support organization.
+08:03:37
+On on January 20 of this year. so 2 months ago, the Octa Security team was alerted that an attempt was made to add a new multi-factor to the Octa account belonging to a site or
+08:03:50
+customer support engineer. Now, although the attempted Mfa.
+08:03:55
+Enrollment was unsuccessful. Out of an abundance of caution we reset the account, and notified Saitel, who engaged a leading forensic firm to perform an investigation. and I think there are some key.
+08:04:09
+Events here that are important to think about. In the time frame of this compromise.
+08:04:14
+On January 20, up to security, received the alert.
+08:04:19
+I just described that a new mfa factor had attempted to be added to a cytill employee's opera account.
 
-As we shared earlier today on our company blog, we are conducting a thorough investigation into the recent LAPSUS$ claims and any impact to our valued customers. MY COMPANY has been identified as a customer that was serviced by the third-party customer support provider during the five-day time period indicated in the blog post, and we are evaluating whether you have been impacted.
+08:04:25
+Minutes later Okta Security jumped on the alert, investigated it, and escalated it to a security incident.
+08:04:32
+Again. Minutes later the octa service desk was added to that incident to assist with containing the user's account, and minutes later the Yoko service disc had terminated the user's office Sessions suspended the
+08:04:45
+account until the root cause of suspicious activity could be identified and remediated.
 
-As detailed in the post, the potential impact to you, our customer, is limited to only that access that support engineers have. By design, these support engineers have limited access. They are unable to create or delete users, or download customer databases. Support engineers do have access to limited data – for example, Jira tickets and lists of users. Support engineers are also able to facilitate the resetting of passwords and multi-factor authentication factors for users, but are unable to choose those passwords. In other words, the attacker could keep triggering a password reset for users, but can't login to the service.
+08:04:51
+The very next day, Oktaber security shared indicators of compromise with Cytel, and at the same stage siteel informed us that they had retained outside support from a leading forensic firm for a period from January
+08:05:07
+21 to march 10. The forensic firm undertook its investigation and analysis of the incident, with its final report issued to Saitel on the tenth of March.
+08:05:21
+A week later, on March the seventeenth, Okta received a summary of that report about the incident from Cytel. Now, looking at the actions of the last 48 h, we saw screenshots being shared online by
+08:05:38
+lapses. Within hours of this occurring up the security hit.
+08:05:41
+The security, had determined that those screenshots were in fact related to the January incident at Cytel.
+08:05:47
+Some hours later, in the early morning of March, the 22 Yesterday, Octa finally received the complete and full investigation report from Satel.
+08:06:05
+I am greatly disappointed by the long period of time that transpired between our initial notification decito in January, and the issuance of the complete investigation report just hours ago, upon reflection once
+08:06:19
+we receive the Cytel Summary report last week. we should have, in fact, moved more Swiftly to understand its implications.
+08:06:28
+Our investigation determined that the screenshots which were not contained in the Cytel summary report were taken from a siteel support Engineer's computer, upon which we determined that the attacker had obtained access
+08:06:41
+Via a remote desktop. protocol.
+08:06:44
+Rdp. This device, though, was owned and managed by Cytel.
 
-Consistent with our core values of transparency, integrity, and customer success, we want to make you aware of these initial findings from our ongoing investigation as we work to address this matter. We will be following up with a customized report within 72 hours and are committed as your partner to help resolve any outstanding issues if any are identified.
-
-You are invited to attend a live webinar tomorrow, Wednesday, March 23, to hear more technical details from Okta CSO, David Bradbury. The webinar will occur at 8 am PDT and again at 4 pm PDT to accommodate our global customers. Please register here.
-
-Our customers are our pride, purpose, and #1 priority. We take our responsibility to protect and secure customers' information very seriously. We deeply apologize for the inconvenience and uncertainty this has caused. For any additional questions, please open a support case.
-
-Sincerely,
-Eric Kelleher
-Chief Customer Officer 
+08:06:48
+The scenario here. If you want to try and vision it in your mind, is it's analogous to walking away from your computer at a coffee shop whereby a stranger has virtually in this case sat down at your machine and is
+08:07:02
+using the mouse and keyboard, so while the attacker never gained access to the octa service via an account takeover.
+08:07:10
+It wasn't, in fact, a machine that was already. logged into octa that was compromised, and that is the way they were able to obtain screenshots and control the machine through that Rdp
+08:07:20
+session. it's important to understand that the access that a support engineer has is limited.
+08:07:30
+It's limited to basic duties and handling inbound support. queries, support engineers, use a number of customer support tools to get their job done, including opt-zone instances of jira slacks blunk
+08:07:42
+ringcentral to name a few, but the majority of support tasks are actually performed using an internally built application called super user, which is used to perform basic management functions of octa customer tents.
+08:07:56
+Now, despite its name, this application does not provide god-like access to all its users.
+08:08:03
+This is an application that we built with least privilege in mind ensure that support engineers are granted only the specific access they're required to perform their role.
+08:08:14
+For example, they are unable to create or delete users.
+08:08:18
+They cannot download customer databases. they cannot access servers in production.
+08:08:25
+They cannot access our source code repositories. The report from the forensic firm highlighted that there was a five-day window of time between January the sixteenth, and January.
+08:08:37
+The 21 of this year, when the thread actor had access to the siteel environment which we have validated and confirmed with our own analysis, trying to scope the blast radius for our investigation, Our team has assumed
+08:08:50
+the worst case scenario, and examined all of the access performed by all sitel employees to the super user application for the five-day period in question.
+08:09:01
+We have since analyzed more than 125,000 log entries to ascertain what actions were performed by Cytel during the relevant period, and we've now identified 366
+08:09:12
+customers through 366 who's Oktaber tenant was accessed by Cytel during that period.
+08:09:20
+Now, because of the access that the support engineers had the information and their ability to take action were highly constrained.
+08:09:30
+I want to repeat that, as a result of the constrained access provided, and our exhaustive analysis of actions performed during that period, we are of the opinion that no corrective actions need to be taken by our customers, now while it
+08:09:45
+is not a necessary step for our customers to take. We fully expect that you may want to complete your own analysis.
+08:09:53
+And so for complete transparency. shortly these in scope customers will receive a report that shows the actions performed on their optic tenant by cytel.
+08:10:04
+During that period of time we think this is the best way to Let customers assess the situation for themselves as with all security incidents. There are many opportunities for us to improve our processes and our communications.
+08:10:18
+I'm, confident that we are moving in the right direction, and that this incident will only serve to strengthen our commitment to security.
+08:10:26
+Now I expect that there may be some questions that remain unanswered, and my hope over the coming days is to find time to speak with all of you to discuss.
+08:10:34
+Further, I would ask that you please reach out to your account representative who can assist in scheduling that meeting enclosing.
+08:10:42
+I appreciate the confidence and trust that you, our customers, place in Oktaber.
+08:10:47
+Identity is the centerpiece of so many of your businesses.
+08:10:51
+Whether that is allowing you to safely connect with your customers.
+08:10:53
+Bdb. partners or your employees and contractors. As a critical piece of your organizations, we will continue to work tirelessly to ensure that you have a dependable and a secure update.
+08:11:06
+Service. I thank you for your time, and I look forward to talking with you shortly.
